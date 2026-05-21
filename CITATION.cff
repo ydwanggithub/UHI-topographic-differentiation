@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+title: >-
+  Code and reproducibility package for
+  "Differential urban heat island drivers along topography
+  reshape green-infrastructure planning across 41 cities
+  in central China"
+message: >-
+  If you use this software, please cite both the article and
+  this archive as below.
+type: software
+authors:
+  - given-names: Yuandong
+    family-names: Wang
+    email: wangyuandong@gnnu.edu.cn
+    affiliation: >-
+      School of Geography and Environmental Engineering,
+      Gannan Normal University
+    orcid: ''
+  - given-names: Jiahui
+    family-names: Zhou
+    affiliation: >-
+      School of Geography and Environmental Engineering,
+      Gannan Normal University
+  - given-names: Xiaowen
+    family-names: Shi
+    affiliation: >-
+      School of Geography and Environmental Engineering,
+      Gannan Normal University
+  - given-names: Lihong
+    family-names: Meng
+    affiliation: >-
+      School of Geography and Environmental Engineering,
+      Gannan Normal University
+year: 2026
+license: MIT
+url: 'https://github.com/ydwanggithub/UHI-topographic-differentiation'
+
+preferred-citation:
+  type: article
+  title: >-
+    Differential urban heat island drivers along topography
+    reshape green-infrastructure planning across 41 cities in
+    central China
+  authors:
+    - given-names: Yuandong
+      family-names: Wang
+    - given-names: Jiahui
+      family-names: Zhou
+    - given-names: Xiaowen
+      family-names: Shi
+    - given-names: Lihong
+      family-names: Meng
+  journal: Sustainable Cities and Society
+  year: 2026
+  notes: under review
