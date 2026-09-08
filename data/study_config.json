@@ -1,0 +1,162 @@
+{
+  "version": "2026.09.08",
+  "period": "2020-2025",
+  "target": "SUHI_strict_mean_K",
+  "target_unit": "K temperature difference, numerically equal to degrees C difference",
+  "candidate_features": [
+    "Tair_mean",
+    "Tair_max",
+    "Precip_annual",
+    "VPD_summer",
+    "Solar_RAD",
+    "NDVI_mean",
+    "EVI_mean",
+    "FVC",
+    "LAI",
+    "PLAND_imperv",
+    "PLAND_water",
+    "PLAND_veg",
+    "ED_total",
+    "AI_imperv",
+    "Mean_Bld_Height",
+    "Bld_Volume_density",
+    "FAR",
+    "Sky_View_Factor",
+    "DEM",
+    "Slope",
+    "Aspect",
+    "TRI",
+    "Relative_elevation"
+  ],
+  "features": [
+    "Tair_mean",
+    "Tair_max",
+    "Precip_annual",
+    "VPD_summer",
+    "Solar_RAD",
+    "NDVI_mean",
+    "EVI_mean",
+    "LAI",
+    "PLAND_imperv",
+    "PLAND_water",
+    "PLAND_veg",
+    "ED_total",
+    "AI_imperv",
+    "Mean_Bld_Height",
+    "Bld_Volume_density",
+    "Sky_View_Factor",
+    "DEM",
+    "Slope",
+    "Aspect",
+    "TRI",
+    "Relative_elevation"
+  ],
+  "categories": {
+    "Climate": [
+      "Tair_mean",
+      "Tair_max",
+      "Precip_annual",
+      "VPD_summer",
+      "Solar_RAD"
+    ],
+    "Surface vegetation": [
+      "NDVI_mean",
+      "EVI_mean",
+      "FVC",
+      "LAI"
+    ],
+    "Urban form 2D": [
+      "PLAND_imperv",
+      "PLAND_water",
+      "PLAND_veg",
+      "ED_total",
+      "AI_imperv"
+    ],
+    "Building form 3D": [
+      "Mean_Bld_Height",
+      "Bld_Volume_density",
+      "FAR",
+      "Sky_View_Factor"
+    ],
+    "Topography": [
+      "DEM",
+      "Slope",
+      "Aspect",
+      "TRI",
+      "Relative_elevation"
+    ]
+  },
+  "deterministic_exclusions": {
+    "FAR": "Bld_Volume_density / 3",
+    "FVC": "clip((NDVI_mean - 0.05) / 0.80, 0, 1)^2"
+  },
+  "catboost_parameters": {
+    "iterations": 450,
+    "depth": 7,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5.0,
+    "loss_function": "RMSE",
+    "verbose": false,
+    "allow_writing_files": false,
+    "task_type": "CPU",
+    "thread_count": 4,
+    "random_seed": 20262903
+  },
+  "strata": [
+    "Flat",
+    "Transitional",
+    "Hilly",
+    "Mountainous"
+  ],
+  "joint_variables": [
+    "NDVI_mean",
+    "EVI_mean",
+    "LAI",
+    "PLAND_imperv",
+    "PLAND_veg",
+    "ED_total",
+    "AI_imperv"
+  ],
+  "fixed_variables": [
+    "Tair_mean",
+    "Tair_max",
+    "Precip_annual",
+    "VPD_summer",
+    "Solar_RAD",
+    "PLAND_water",
+    "Mean_Bld_Height",
+    "Bld_Volume_density",
+    "Sky_View_Factor",
+    "DEM",
+    "Slope",
+    "Aspect",
+    "TRI",
+    "Relative_elevation"
+  ],
+  "profile_definitions": {
+    "moderate": [
+      0.1,
+      0.2,
+      0.1,
+      0.1
+    ],
+    "primary": [
+      0.2,
+      0.3,
+      0.15,
+      0.15
+    ],
+    "upper": [
+      0.3,
+      0.45,
+      0.2,
+      0.2
+    ]
+  },
+  "scenario_names": {
+    "moderate": "S1",
+    "primary": "S2",
+    "upper": "S3"
+  },
+  "sampling_seed": 20260908
+}

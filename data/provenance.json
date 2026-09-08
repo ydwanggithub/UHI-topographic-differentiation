@@ -1,0 +1,30 @@
+{
+  "version": "2026.09.08",
+  "date": "2026-09-08",
+  "sampling_seed": 20260908,
+  "source_sha256": {
+    "model_sample.parquet": "de87956b2e997f8143fc2e7d90e9ed56acdce55a98d628af94f192acc602bb20",
+    "greening_eligible_core.parquet": "0e58c342c88718178eb96eeadee927cad41af6e4189eb036d379627626ef7135",
+    "joint_greening_profiles.parquet": "1486fa311caf2bde3f8355ab0409e2d3ef3f82b865130b3eaef73d0d20c4aa5e",
+    "analysis_plan.json": "a9d64366c4af1fffa7d94c957e7e26ba3db8ca545dde0cb115dc3ca0ffd72e97",
+    "greening_protocol.json": "0372c0a5bd6fad64892374802abd34248b98237074722ebdce8f3d1e04135d91"
+  },
+  "model_sample": {
+    "source_rows": 198258,
+    "released_rows": 4100,
+    "cities": 41,
+    "rows_per_city": 100,
+    "unique_physical_sites": true,
+    "sampling": "Sorted cell identifiers; 100 cells without replacement per city; seed plus alphabetical city index"
+  },
+  "greening_sample": {
+    "eligible_source_rows": 70296,
+    "source_pairs": 119632,
+    "released_pairs": 1230,
+    "released_cells": 2307,
+    "sampling": "Up to 10 existing pairs per city and scenario; seed plus alphabetical city-scenario index"
+  },
+  "summary_csv_files": 34,
+  "manuscript_png_figures": 15,
+  "summary_and_figure_files": "Byte-identical to the corresponding revised submission files"
+}

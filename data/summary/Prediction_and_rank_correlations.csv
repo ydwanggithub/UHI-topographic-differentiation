@@ -1,0 +1,6 @@
+stratum,n_cities,rho_city_r2_vs_rank_agreement,rho_residual_moran_vs_rank_agreement,interpretation
+All,41,0.5253433242873751,-0.020483769903357082,descriptive between-city association; not a mechanistic test
+Flat,8,0.024098134635593994,0.5783552312542559,descriptive between-city association; not a mechanistic test
+Hilly,14,0.7018706117354896,0.07260730466229204,descriptive between-city association; not a mechanistic test
+Mountainous,7,0.25,-0.10714285714285716,descriptive between-city association; not a mechanistic test
+Transitional,12,0.7132867132867133,-0.5524475524475525,descriptive between-city association; not a mechanistic test

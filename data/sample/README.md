@@ -1,21 +1,17 @@
-# Sample data
+# Demonstration samples
 
-`clean_41_smod_sample_n2000.csv` is a 2,000-cell stratified sample (500 cells per topographic stratum) drawn from a much larger analysis grid (~1.19 million cells at 250 m resolution across 41 cities in central China).
+All three CSVs were selected from the revised 2020-2025 analysis data. No values were simulated.
 
-The sample preserves the column schema of the full database (36 columns covering LST, climate, vegetation, urban form, and topographic drivers) and is intended **only for demonstration that the example scripts in `code/` execute end-to-end on the published column schema**, not for statistical reanalysis.
+| File | Contents |
+| --- | --- |
+| `model_sample_2020_2025.csv` | 100 cells per city, 4,100 cells in total, sampled from the 198,258-cell modeling dataset |
+| `greening_pairs_2020_2025.csv` | Up to 10 existing target-reference pairs per city and scenario, selected from the 119,632 pairs in the revised analysis |
+| `greening_cells_2020_2025.csv` | The actual eligible urban cells needed to supply both members of every released pair |
 
-## Column groups
+Sampling uses seed 20260908 and retains the original city ownership and four terrain strata. `../provenance.json` records the source hashes, sampling order, and exact exported counts. Cells can participate in more than one greening pair or scenario; `cell_id` is unique in each cell table.
 
-- Identification: `city_name`, `province`, `stratum`, `lon`, `lat`
-- Thermal: `LST_K`
-- Climate: `Tair_mean`, `Tmax`, `VPD`, `Precip`, `Solar`
-- Surface vegetation: `NDVI`, `EVI`, `FVC`, `LAI`
-- Urban 2D: `PLAND_imperv`, `pct_water`, `pct_veg`, `ED`, `AIisa`
-- Urban 3D: `BldH`, `BVD`, `FAR`, `SVF`
-- Topographic: `DEM`, `Slope`, `Aspect`, `TRI`, `RelDEM`
+The modeling CSV includes all 23 candidate variables. The 21 primary inputs and their order are defined in `../study_config.json`. The response is `SUHI_strict_mean_K`. Its rural reference is calculated from the full study data and supplied as `rural_reference_lst_k`. The annual LST columns and valid-year counts retain their observed values; a missing annual value remains blank.
 
-Stratum labels: `Flat`, `Transitional`, `Hilly`, `Mountainous`.
+In the pair table, `cell_id` is the target cell and `donor_cell_id` is its existing greener reference in the same city. The internal profile names `moderate`, `primary`, and `upper` correspond to S1, S2, and S3. `area_m2` is the target cell area used for averaging. `context_distance` is the distance between standardized context profiles used to select the reference, not a geographic distance in meters.
 
-## Access to the full data
-
-The full driver grid is not included in this repository. For collaboration or access requests, contact the corresponding author of the associated manuscript.
+The examples fit a small demonstration model. Full-study results remain in `../summary/`, including the urban means that account for unchanged eligible land. Column definitions and source products are listed in `../VARIABLES.md`.

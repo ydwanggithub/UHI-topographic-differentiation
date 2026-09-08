@@ -1,55 +1,45 @@
 cff-version: 1.2.0
 title: >-
-  Code and reproducibility package for
-  "Differential urban heat island drivers along topography
-  reshape green-infrastructure planning across 41 cities
-  in central China"
+  Demonstration code and data for Topography shapes surface urban heat island
+  controls with implications for green infrastructure cooling across 41 cities
+  in central China
 message: >-
-  If you use this software, please cite both the article and
-  this archive as below.
+  Please cite the associated manuscript and identify the repository version
+  when using these examples or data.
 type: software
+version: "2026.09.08"
+date-released: 2026-09-08
 authors:
   - given-names: Yuandong
     family-names: Wang
     email: wangyuandong@gnnu.edu.cn
-    affiliation: >-
-      School of Geography and Environmental Engineering,
-      Gannan Normal University
-    orcid: ''
+    affiliation: Gannan Normal University
   - given-names: Jiahui
     family-names: Zhou
-    affiliation: >-
-      School of Geography and Environmental Engineering,
-      Gannan Normal University
-  - given-names: Xiaowen
-    family-names: Shi
-    affiliation: >-
-      School of Geography and Environmental Engineering,
-      Gannan Normal University
+    affiliation: Gannan Normal University
+  - given-names: Yuyao
+    family-names: Wang
+    affiliation: Gannan Normal University
   - given-names: Lihong
     family-names: Meng
-    affiliation: >-
-      School of Geography and Environmental Engineering,
-      Gannan Normal University
-year: 2026
+    affiliation: Gannan Normal University
 license: MIT
-url: 'https://github.com/ydwanggithub/UHI-topographic-differentiation'
-
+url: "https://github.com/ydwanggithub/UHI-topographic-differentiation"
+repository-code: "https://github.com/ydwanggithub/UHI-topographic-differentiation"
 preferred-citation:
   type: article
   title: >-
-    Differential urban heat island drivers along topography
-    reshape green-infrastructure planning across 41 cities in
-    central China
+    Topography shapes surface urban heat island controls with implications for
+    green infrastructure cooling across 41 cities in central China
   authors:
     - given-names: Yuandong
       family-names: Wang
     - given-names: Jiahui
       family-names: Zhou
-    - given-names: Xiaowen
-      family-names: Shi
+    - given-names: Yuyao
+      family-names: Wang
     - given-names: Lihong
       family-names: Meng
   journal: Sustainable Cities and Society
   year: 2026
-  notes: under review
+  notes: Manuscript under review

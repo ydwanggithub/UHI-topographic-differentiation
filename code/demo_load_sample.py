@@ -1,25 +1,21 @@
-"""
-Minimal demo: load the released sample CSV and inspect its schema.
+"""Check the revised sample and reconstruct its rural-reference SUHI."""
 
-Run from repository root:
-    python code/demo_load_sample.py
-"""
-from pathlib import Path
-import pandas as pd
+import numpy as np
 
-SAMPLE = Path(__file__).resolve().parents[1] / "data" / "sample" / "clean_41_smod_sample_n2000.csv"
+from study import CONFIG, FEATURES, TARGET, load_sample, verify_release_files
 
 
 def main() -> None:
-    df = pd.read_csv(SAMPLE)
-    print(f"loaded {SAMPLE.name}: {len(df):,} rows, {len(df.columns)} columns")
-    print()
-    print("columns:")
-    for col in df.columns:
-        print(f"  - {col}")
-    print()
-    print("per-stratum row counts:")
-    print(df["stratum"].value_counts())
+    frame = load_sample()
+    computed = frame.LST_K - frame.rural_reference_lst_k
+    np.testing.assert_allclose(computed, frame[TARGET], atol=1e-10, rtol=0)
+    verified = verify_release_files()
+    print(f"Period: {CONFIG['period']}")
+    print(f"Sample: {len(frame):,} cells, {frame.city.nunique()} cities")
+    print(f"Candidate variables: {len(CONFIG['candidate_features'])}; model inputs: {len(FEATURES)}")
+    print(f"Maximum SUHI reconstruction difference: {abs(computed - frame[TARGET]).max():.3g} K")
+    print(frame.groupby('stratum', observed=True).agg(cities=('city', 'nunique'), cells=('cell_id', 'size')).to_string())
+    print(f"Verified {verified} released data and figure checksums.")
 
 
 if __name__ == "__main__":

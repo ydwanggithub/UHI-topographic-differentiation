@@ -1,0 +1,9 @@
+outcome,stratum,n_cities,n_cells,mean_city_temperature_k,sd_city_means_k,between_city_variance_k2,within_city_variance_k2,city_icc_within_stratum,interpretation
+absolute_lst,Flat,8,36763,311.7754904610333,1.5810202604496744,2.4697549822881446,11.854085200367512,0.1724226848941461,descriptive variance partition on fixed cells; no cell-independent significance test
+absolute_lst,Hilly,14,68851,311.36168651248653,1.4855866682894026,2.1977336757614037,10.810315579489346,0.16895182610676845,descriptive variance partition on fixed cells; no cell-independent significance test
+absolute_lst,Mountainous,7,34414,308.54951151844534,2.2324064527215057,4.863109948134858,12.201557467880987,0.2849812322489592,descriptive variance partition on fixed cells; no cell-independent significance test
+absolute_lst,Transitional,12,58230,312.3050915443115,1.6570146897401044,2.7322322207724503,10.959067166887728,0.19955974545666438,descriptive variance partition on fixed cells; no cell-independent significance test
+strict_suhi,Flat,8,36763,1.418138156605328,0.6993351345982004,0.4794288865166763,11.854085200367493,0.038872042723534526,descriptive variance partition on fixed cells; no cell-independent significance test
+strict_suhi,Hilly,14,68851,1.6992419210243441,0.6556237060935081,0.4273220119931743,10.810315579489341,0.03802596484487628,descriptive variance partition on fixed cells; no cell-independent significance test
+strict_suhi,Mountainous,7,34414,1.7449330306938156,0.5595085511587313,0.3098518951651755,12.201557467880967,0.02476554688397919,descriptive variance partition on fixed cells; no cell-independent significance test
+strict_suhi,Transitional,12,58230,1.7895669624690198,0.635644814001532,0.39933735850306873,10.959067166887722,0.03515787429567088,descriptive variance partition on fixed cells; no cell-independent significance test

@@ -1,0 +1,17 @@
+{
+  "Figure_01_Study_area_and_topographic_strata.png": "4d33f71bd33f56f4ea2ffa14a8fa91058d66a4a1373a6a5a1ee64f1c1681619f",
+  "Figure_02_Analytical_workflow.png": "a3f5e0b9c94541822aa4385c49563c622c397fa125fa3c2400dd821483255aaa",
+  "Figure_03_Summer_LST_pattern.png": "c9da4737b4d007a6e2c120c9458086b4956cba4dae20d5771b31f0c09951d759",
+  "Figure_04_Variable_preparation_and_VIF.png": "f130afc74ca4c4e1717cb8eb6ef8d97f78bb7348e1cb87b079076cc5177a2760",
+  "Figure_05_Global_SHAP_attribution.png": "8570e3399809eaa0396b9b2c5d4ed6b8ef736ede42041257237b1419f463279d",
+  "Figure_06_Spatial_SHAP_mechanism.png": "b7c6170d372254ac8439ad5e877269477e3b4ead457fcb5b518d09a52eadf7cb",
+  "Figure_07_Cross_model_consistency.png": "75964688762ea3ffcc00ef82588ea60cc6f2894fc6a676a5d1e104a4fed1c379",
+  "Figure_08_Driver_hierarchy_reversal.png": "346d4fab0437eb6e3cc3a813f4ff938f6eb0110db38fa43ea3bef8a4345328da",
+  "Figure_09_Robustness_assessment.png": "9d1383c769592434bdca4e43d2187cb2055699d2d87f34f85ba0a02bddf33894",
+  "Figure_10_Per_city_SHAP_ranks.png": "0eb368cfabbb634adc874557d8044bb769296c8311418d82526c0d5511028349",
+  "Figure_11_Grid_coarsening_stability.png": "adfe1a83c60f17e09b4d3b4289c2f44dbcc16f4081146e6bb1b89904723effd6",
+  "Figure_12_SEM_pathways.png": "fe2854eb57b3cf2544cc054fde65db8370f79a98316a9ab11e33036c13adea59",
+  "Figure_13_Partial_dependence_responses.png": "36b7456ad384e500cf7930e3ed18eb5eadf9b6ef7a736bacf8b3daaf5b89d0c0",
+  "Figure_14_Two_way_partial_dependence.png": "389b1995414466564ba93bbfe7f1407229cf91d660b2a556842a6def86e7b295",
+  "Figure_15_Modelled_UGI_scenarios.png": "f4819a7dd98ff84885d2dd65573ceb07a60bdfd34c45a776870bb9c655de427e"
+}
